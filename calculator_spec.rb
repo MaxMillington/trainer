@@ -15,11 +15,11 @@ describe 'calculator' do
     expect(calculator.evaluate('4 - 2')).to eq(2)
   end
 
-  xit 'handles complex addition' do
+  it 'handles complex addition' do
     expect(calculator.evaluate('1 + 2 + 3')).to eq(6)
   end
 
-  xit 'handles complex subtraction' do
+  it 'handles complex subtraction' do
     expect(calculator.evaluate('7 - 2 - 3')).to eq(2)
   end
 
@@ -34,23 +34,23 @@ describe 'calculator' do
   it 'handles multiplication' do
     expect(calculator.evaluate('10 * 2')).to eq(20)
   end
-
-  xit 'handles mixed operations' do
+  #
+  it 'handles mixed operations' do
     expect(calculator.evaluate('2 + 2 / 4')).to eq(2.5)
   end
 
-  xit 'handles parentheses' do
-    expect(calculator.evaluate('2 * (10 - 2)')).to eq(16)
-  end
-
+  # xit 'handles parentheses' do
+  #   expect(calculator.evaluate('2 * (10 - 2)')).to eq(16)
+  # end
+  #
   it 'checks for mismatched parentheses' do
     expect(calculator.evaluate('2 * (10 - 2))')).to eq(nil)
   end
 
-  xit 'handles nested parentheses' do
-    expect(calculator.evaluate( '2 * (10 - (2 *3))')).to eq(8)
-  end
-
+  # xit 'handles nested parentheses' do
+  #   expect(calculator.evaluate( '2 * (10 - (2 *3))')).to eq(8)
+  # end
+  
   it 'handles exponents' do
     expect(calculator.evaluate('2 ^ 4')).to eq(16)
   end
