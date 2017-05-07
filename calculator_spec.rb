@@ -39,23 +39,27 @@ describe 'calculator' do
     expect(calculator.evaluate('2 + 2 / 4')).to eq(2.5)
   end
 
-  # xit 'handles parentheses' do
-  #   expect(calculator.evaluate('2 * (10 - 2)')).to eq(16)
-  # end
-  #
+  it 'handles parentheses' do
+    expect(calculator.evaluate('2 * (10 - 2)')).to eq(16)
+  end
+
   it 'checks for mismatched parentheses' do
     expect(calculator.evaluate('2 * (10 - 2))')).to eq(nil)
   end
 
-  # xit 'handles nested parentheses' do
-  #   expect(calculator.evaluate( '2 * (10 - (2 *3))')).to eq(8)
-  # end
-  
+  it 'handles nested parentheses' do
+    expect(calculator.evaluate( '2 * (10 - (2 *3))')).to eq(8)
+  end
+
   it 'handles exponents' do
     expect(calculator.evaluate('2 ^ 4')).to eq(16)
   end
 
   it 'deletes non allowed characters' do
     expect(calculator.evaluate('5 + 3;')).to eq(8)
+  end
+
+  it 'handles double negation' do
+    expect(calculator.evaluate('5 -- 2')).to eq(7)
   end
 end
